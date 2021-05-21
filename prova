@@ -1,0 +1,56 @@
+MUDA ALGUMAS VARIAVEIS
+
+def maximo_2(n1,n2):
+  if n1 > n2:
+    return n1 
+  return n2
+-------------------------------
+
+def media(lista):
+  soma=0
+  for elemento in lista:
+    soma+=elemento
+  return soma/len(lista)
+
+---------------------------------
+
+lista = [ 3, 7, 9, 0, 2, 11]
+
+media_3_primeiros = media(lista[:3])
+
+media_3_ultimos = media(lista[-3:])
+
+maior_das_medias = maximo_2(media_3_primeiros, media_3_ultimos )
+print(maior_das_medias)
+
+
+-----------------------------------
+
+with open('./input.txt', 'r') as arquivo_de_entrada:
+    try:
+        linhas = arquivo_de_entrada.readlines()
+        notas = list(map( lambda x: float(x), linhas))
+    except:
+        print('deu errado')
+    arquivo_de_entrada.close()
+
+with open('./saida.txt', 'w') as saida:
+    linhas_da_nota = []
+    linhas_da_nota.append(f'Minimo \t {min(notas)}')
+    linhas_da_nota.append(f'Maximo \t {max(notas)}')
+    linhas_da_nota.append(f'Media \t {sum(notas)/len(notas)}')
+
+    saida.write(str.join('\n', linhas_da_nota))
+    saida.close()
+
+------------------------------------------------------
+
+
+def cria_matriz(nlinhas,ncolunas):
+  matriz=[]
+  for i in range(nlinhas):
+    linha = []
+    for j in range (ncolunas):
+      linha.append(randint(0,10))
+    matriz.append(linha)
+  return matriz
