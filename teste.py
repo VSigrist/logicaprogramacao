@@ -42,7 +42,7 @@ with open('./nota_fiscal.txt', 'w') as nota_fiscal:
     
 # notafiscal_2
 
-    produtos = []
+produtos = []
 precos = []
 with open('compras.txt', 'r') as compras:
     try:
