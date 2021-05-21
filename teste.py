@@ -38,7 +38,7 @@ with open('./nota_fiscal.txt', 'w') as nota_fiscal:
         nota_fiscal.write(str.join('\n', conteudo))
     nota_fiscal.close()
     
-    #notafiscal_2
+# notafiscal_2
     produtos = []
 precos = []
 with open('compras.txt', 'r') as compras:
@@ -61,3 +61,5 @@ with open('./nota_fiscal_plus.txt', 'w') as nota_fiscal:
         linhas_da_nota.append(f'total \t {sum(precos)}')
         nota_fiscal.write(str.join('\n', linhas_da_nota))
     nota_fiscal.close()
+
+#
